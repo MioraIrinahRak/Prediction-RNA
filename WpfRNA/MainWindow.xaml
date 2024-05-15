@@ -26,7 +26,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" Height="40" Background="Beige">
-                <TextBlock Text="500 premières valeurs" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Light" Foreground="DarkGray"/>
+                <TextBlock Text="Les 500 premières valeurs" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Light" Foreground="DarkGray"/>
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
