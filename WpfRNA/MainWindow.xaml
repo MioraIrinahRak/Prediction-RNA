@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfRNA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:local="clr-namespace:WpfRNA"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="30*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="0" Fill="#fbfbfb"/>
+        <Grid Grid.Column="0">
+            <oxy:PlotView Model="{Binding PlotModel}"/>
+        </Grid>
+
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Height="40" Background="Beige">
+                <TextBlock Text="500 premières valeurs" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Light" Foreground="DarkGray"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBlock Text="X" HorizontalAlignment="Left" FontSize="18" FontWeight="Light" />
+                    <ListBox Name="listex" HorizontalAlignment="Left" >
+
+                    </ListBox>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBlock Text="Y" HorizontalAlignment="Right" FontSize="18" FontWeight="Light" />
+                    <ListBox Name="listey" HorizontalAlignment="Right" >
+
+                    </ListBox>
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+
+    </Grid>
+
+</Window>
