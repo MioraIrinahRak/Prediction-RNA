@@ -20,31 +20,51 @@
 
 
         <Grid Grid.Column="1">
+            <!--definir les lignes dans cette colonne-->
             <Grid.RowDefinitions>
-                <RowDefinition Height="90"/>
-                <RowDefinition/>
+                <RowDefinition Height="47*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="16*"/>
+
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" Height="40" Background="Beige">
-                <TextBlock Text="Les 500 premières valeurs" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Light" Foreground="DarkGray"/>
+            <Grid Grid.Row="0">
+                <TextBlock Text="Les 500 premières valeurs" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" FontWeight="Light" Foreground="DarkGray"/>
             </Grid>
-            <Grid Grid.Row="1">
+            <Grid Margin="0,20,0,0" Grid.RowSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+
                 <Grid Grid.Column="0">
-                    <TextBlock Text="X" HorizontalAlignment="Left" FontSize="18" FontWeight="Light" />
-                    <ListBox Name="listex" HorizontalAlignment="Left" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock Text="X" HorizontalAlignment="Center" Margin="10" FontSize="18" FontWeight="Light" Grid.Row="0" />
+                    <ListBox Name="listex" HorizontalAlignment="Center" Grid.Row="1" >
 
                     </ListBox>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <TextBlock Text="Y" HorizontalAlignment="Right" FontSize="18" FontWeight="Light" />
-                    <ListBox Name="listey" HorizontalAlignment="Right" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Y" HorizontalAlignment="Center"  Margin="10"  FontSize="18" FontWeight="Light" Grid.Row="0" />
+                    <ListBox Name="listey" HorizontalAlignment="Center"  Grid.Row="1">
 
                     </ListBox>
                 </Grid>
 
+            </Grid>
+            <Grid Grid.Row="2">
+              
+
+                <Button Content="Trouver l'architecture optimal" Click="ArchtectureOptimale_click" Width="200" Height="50" HorizontalAlignment="Center"/>
+               
             </Grid>
 
         </Grid>
